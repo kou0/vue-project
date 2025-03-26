@@ -1,22 +1,22 @@
 <script setup>
 import { ref } from 'vue'
 
-const msg = ref('Hello World!')
+const drawer = ref(false)
 </script>
 
 <template>
   <div>
-    <button>メイン</button>
-    <button class="ml-2">申請一覧</button>
-  </div>
-  <div>
-    <button>年次休暇申請</button>
-    <button class="ml-2">その他の休暇申請</button>
+    <v-app>
+      <v-navigation-drawer v-model="drawer" app>
+      </v-navigation-drawer>
+
+      <v-app-bar app>
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+        <v-toolbar-title>Application</v-toolbar-title>
+      </v-app-bar>
+    </v-app>
   </div>
 </template>
 
-<style lang="css" scoped>
-.ml-2 {
-  margin-left: 12px;
-}
-</style>
+<style lang="css" scoped></style>

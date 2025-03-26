@@ -8,7 +8,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "latest"
+    "vue": "latest",
+    "vuetify": "^3.7.19"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
